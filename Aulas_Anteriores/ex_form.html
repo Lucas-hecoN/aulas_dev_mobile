@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="salvar_dados.php" method="post">
+        <label for="nome">Nome:</label> <br/>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome"> <br/>
+
+        <label for="email">Email:</label> <br>
+        <input type="email" name="mensagem" id="mensagem" placeholder="Digite seu email" required> <br>
+
+        <label for="mensagem">Mensagem</label> <br>
+        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Digite sua mensagem"></textarea> <br>
+        
+        <input type="checkbox" id="checkbox" name="checkbox">
+        <label for="checkbox">Checkbox 1</label> <br>
+        <input type="checkbox" id="checkbox" name="checkbox">
+        <label for="checkbox">Checkbox 2</label> <br>
+
+        <input type="radio" id="radio1" name="radio">
+        <label for="radio1">Opção 1</label> <br>
+        <input type="radio" id="radio2" name="radio">
+        <label for="radio2">Opção 2</label> <br>
+
+        <label for="range">Selecione um valor:</label> <br>
+        <input type="range" id="range" name="range" min="0" max="10"> <br>
+
+        <label for="file">Selecione um arquivo:</label> <br>
+        <input type="file" id="name" name="file"> <br>
+
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina HTML</title>
+</head>
+<body>
+    <h1><u>Minha Página HTML</u></h1>
+
+    <p>Bem-vindo á minha página HTML. Aqui está um exercício que inclui várias tags HTML.</p>
+    <p>Esta é uma página de exemplo para praticar o uso de tags HTML.</p>
+
+    <h2>Listas</h2>
+
+    <h3>Lista Ordenada</h3>
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <h3>Lista não Ordenada</h3>
+    <ul>
+        <li>Item A</li>
+        <li>Item B</li>
+        <li>Item C</li>
+    </ul>
+
+    <h2>Links</h2>
+    <p>Confira estes links úteis:</p>
+    <ul>
+        <li><a href="https://www.google.com/" target="_blank">Exemplos.com</a></li>
+        <li><a href="#form">Ir para o formulário</a></li>
+    </ul>
+
+    <h2>Imagem</h2>
+    <img src="html.png" alt="Imagem html">
+
+    <h2>Tabela</h2>
+    <table border="2">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Sobrenome</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>João</td>
+                <td>Silva</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Maria</td>
+                <td>Souza</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>Paulo</td>
+                <td>Gomes</td>
+                <td>25</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3">Total de pessoas = 3</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h2>Formulário</h2>
+    <form action="#" method="post" id="form">
+        <label for="nome">Nome:</label> <br/>
+        <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required> <br>
+
+        <label for="email">Email:</label> <br>
+        <input type="email" name="mensagem" id="mensagem" placeholder="Digite seu email" required> <br>
+
+        <label for="comentario">Comentário:</label> <br>
+        <textarea name="comentario" id="comentario" cols="100" rows="20"></textarea> <br>
+
+        <input type="submit" value="Enviar">
+    </form>
+    
+</body>
+</html>

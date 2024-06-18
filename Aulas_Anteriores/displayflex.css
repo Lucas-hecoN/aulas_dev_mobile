@@ -1,0 +1,32 @@
+.flexbox {
+    height: 350px;
+    border: 3px solid rgb(255, 0, 0);
+    display: flex;
+    margin-bottom: 19px;
+    justify-content: space-between;
+}
+
+.flexbox div {
+    border: 5px solid rgb(0, 255, 0);
+    width: 250px;
+    margin: 15px;
+}
+
+.flex-container1 {
+    /* flex-direction: row;
+    flex-wrap: wrap; */
+    flex-flow:column nowrap;
+    justify-content: space-around;
+}
+
+.flex-container2 {
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flex-container2 .div3 {
+    /* flex-grow: 2; Define a habilidade de um elemento crescer */
+    /* flex-shrink: 1; Define a habilidade de um elemento diminuir */
+    order: -1;
+    /* align-self: flex-end; */
+}

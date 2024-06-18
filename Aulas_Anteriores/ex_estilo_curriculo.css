@@ -1,0 +1,22 @@
+body {
+    background-color: rgb(168, 255, 194);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 25px;
+}
+
+h1 {
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+h2 {
+    background-color: rgb(85, 143, 93); 
+}
+
+ul {
+    list-style-position:inside;
+    padding-right: 50px;
+}
+
+/* line height */
