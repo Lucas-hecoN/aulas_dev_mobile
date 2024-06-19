@@ -1,22 +1,134 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background: url(https://media.istockphoto.com/id/1419766496/pt/foto/abstract-concepts-of-cybersecurity-technology-and-digital-data-protection-protect-internet.jpg?s=612x612&w=0&k=20&c=wMpOR05-WaYcht860gnKqA1qf1mao9QOse0Fj9yhUhE=);
+    background-color: white;
+    background-image: url(https://media.istockphoto.com/id/1419766496/pt/foto/abstract-concepts-of-cybersecurity-technology-and-digital-data-protection-protect-internet.jpg?s=612x612&w=0&k=20&c=wMpOR05-WaYcht860gnKqA1qf1mao9QOse0Fj9yhUhE=);
+    background-size: cover; /*Garante que imagem cubra todo o corpo*/
+    background-attachment: fixed; /*Torna o plano de fundo fixo enquato a página é rolada*/
+    background-position: center; /*Centraliza a imagem no corpo*/
+    /* background-repeat: no-repeat; */
 }
 
-header.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* justify-content: center; */
-    height: 250px;
+.hero {
+    background-image: url(https://ccbc.org.br/wp-content/uploads/2019/09/comiss%C3%A3o-de-tecnologia-ccbc-planos.jpg);
+    height: 350px;
+    background-size: cover;
+    background-position: right center;
+    padding-top: 1px;
+}
+
+.hero-content {
+    margin: 70px auto 0;
+    width: 80%;
+    text-align: center;
     color: white;
-    background: url(https://ccbc.org.br/wp-content/uploads/2019/09/comiss%C3%A3o-de-tecnologia-ccbc-planos.jpg) no-repeat center center/cover;
-    /* text-align: center; */
-    /* position: relative; */
 }
 
-nav {
+.hero-content h1 {
+    font-size: 56px;
+    text-shadow: 2px 2px 2px black;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+
+.hero-content p {
+    background-color: rgb(0, 0, 0, 0.8);
+    font-size: 20px;
+    display: inline-block; 
+    padding: 15px;
+    border-bottom: 2px solid;
+}
+
+.hero nav ul {
+    margin: 20px 80px 0 0;
+    text-align: right;
+}
+
+.hero nav li {
+    display: inline-block;
+    list-style-type: none;
+    border: 1px solid white;
+    margin-left: 30px;
+}
+
+.hero nav a {
+    background-color: rgba(105, 105, 105, 0.753);
+    padding: 16px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px bold;
+    letter-spacing: 2px;
+}
+
+.hero nav a:hover {
+    background-color: rgb(0, 255, 234);
+    color: black;
+    
+}
+
+main {
+    width: 80%;
+    margin: auto;
+    max-width: 950px;
+}
+
+article {
+    background-color: white;
+    padding: 16px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+article h2 {
+    border-bottom: 2px solid black;
+    background-color: aqua;
+    padding: 10px;
+    margin-top: 0;
+}
+
+article p {
+    border: 2px solid rgb(110, 110, 110);
+    background-color: rgba(0, 255, 255, 0.192);
+    padding: 15px;
+    text-align: justify;
+}
+
+article img {
+    max-width: 100%;
+    display: block; /* Evita espaços extras ao redor da imagem */
+    margin: 0 auto 25px; /*Adiciona um espaçamento abaixo da imagem*/
+}
+
+.btn {
+    background-color: white;
+    display: block;
+    padding: 12px;
+    border-radius: 7px;
+    text-decoration: none;
+    margin-left: auto;
+    width: fit-content; /* Ajusta de acordo com o conteudo do botao */
+}
+
+.btn:hover {
+    background-color: aqua;
+    color: black;
+}
+
+.rodape {
+    color: rgb(255, 255, 255);
+    background-color: black;
+    text-align: center;
+    padding: 30px;
+    text-shadow: 2px 2px 2px gray;
+}
+
+
+
+
+
+/* nav {
     width: 100%;
 }
 
@@ -56,4 +168,4 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     height: 100%;
-}
+} */
