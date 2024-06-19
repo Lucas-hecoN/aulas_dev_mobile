@@ -1,10 +1,59 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    background: url(https://media.istockphoto.com/id/1419766496/pt/foto/abstract-concepts-of-cybersecurity-technology-and-digital-data-protection-protect-internet.jpg?s=612x612&w=0&k=20&c=wMpOR05-WaYcht860gnKqA1qf1mao9QOse0Fj9yhUhE=);
 }
 
-.hero {
-    background-image: url(https://tm.ibxk.com.br/2022/09/16/16153619604063.jpg?ims=1200x675);
+header.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
     height: 250px;
-    
+    color: white;
+    background: url(https://ccbc.org.br/wp-content/uploads/2019/09/comiss%C3%A3o-de-tecnologia-ccbc-planos.jpg) no-repeat center center/cover;
+    /* text-align: center; */
+    /* position: relative; */
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 20px;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(92, 92, 92, 0.678);
+    height: 35px;
+    width: 90px;
+    margin-right: 20px;
+    border: 3px solid white;
+}
+
+nav ul li:hover {
+    background-color: rgb(127, 202, 255);
+}
+
+nav ul li a {
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
