@@ -35,7 +35,8 @@ body {
     text-shadow: 3px 3px 3px black;
     text-transform: uppercase;
     font-size: 25px;
-    margin: 0; /* remove a margem padrao do titulo */
+    margin: 0;
+    /* remove a margem padrao do titulo */
 }
 
 .cab1 nav ul {
@@ -83,6 +84,8 @@ section {
 }
 
 article {
+    display: flex;
+    flex-direction: column;
     width: 240px;
     height: 350px;
     padding: 15px 32px;
@@ -91,21 +94,35 @@ article {
     background-color: rgb(0, 66, 56);
 }
 
-header h2 {
+.cab2 h2 {
     padding-bottom: 10px;
     border-bottom: 2px solid rgb(218, 218, 0);
     text-transform: uppercase;
     font-size: 20px;
 }
 
+h2 
+{
+    margin: 15px 0;
+}
+
 .list ul {
     list-style-position: inside;
+    font-size: 14px;
+    line-height: 25px;
     padding-left: 0;
+    color: rgb(174, 174, 174);
+    margin: 0;
+}
+
+.list ul li::marker {
+    color: rgb(218, 218, 0);
 }
 
 article nav {
     display: flex;
     height: 50px;
+    margin-top: auto;
     border-radius: 5px;
     background-color: rgb(218, 218, 0);
 }
@@ -114,5 +131,10 @@ nav h3 {
     text-align: center;
     text-transform: uppercase;
     font-size: 15px;
+    margin: auto;
+}
+
+nav a {
+    text-decoration: none;
     color: black;
 }
