@@ -59,33 +59,33 @@ a.header_nav_active_home{
 .main_section {
     /* border: 2px solid red; */
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    background-color: rgb(0, 66, 56);
+    background-color: rgb(218, 218, 0);
     padding: 20px;
     flex-wrap: wrap;
 }
 
 .main_text {
-    width: 510px;
+    width: 512px;
 }
 
 .main_text h1 {
     font-size: 16px;
     text-transform: uppercase;
-    color: gainsboro;
+    color: rgb(255, 255, 255);
     margin-bottom: 5px;
 }
 
 .main_text h2 {
     font-size: 40px;
-    color: rgb(218, 218, 0);
+    color: rgb(0, 66, 56);
     margin-top: 0;
 }
 
 .main_circle {
-    width: 400px;
-    height: 400px;
+    min-height: 400px;
+    min-width: 400px;
     border-radius: 50%;
     overflow: hidden;
     position: relative;
@@ -93,10 +93,92 @@ a.header_nav_active_home{
 
 .main_img {
     width: 150%;
-    height: 100%;
     position: absolute;
     right: 0;
     top: 50%;
     transform: translateY(-50%);
     object-fit: cover
 }
+
+.main-nav1 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    padding: 25px;
+    flex-wrap: wrap;
+    background-color: rgb(0, 66, 56);
+}
+
+.main-nav1-title {
+    width: 250px;
+    font-size: 18px;
+    color: rgb(218, 218, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid red;
+}
+
+.main-nav1-list {
+    border: 2px solid red;
+    width: 50%;
+    padding-left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    gap: 20px;
+}
+
+.main-nav1-list a {
+    color: white;
+    text-decoration: none;
+}
+
+.main-nav1-list a:hover {
+    text-decoration: underline rgb(218, 218, 0);
+}
+
+.main_section_2 {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(236, 236, 236);
+}
+
+.article-img {
+    margin: 0;
+}
+
+.article-img img {
+    width: 500px;
+}
+
+.main-article-1 {
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+}
+
+.article-content-1 h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+    color: rgb(0, 66, 56);
+}
+
+.article-content-1 h3 {
+    font-size: 30px;
+    color: rgb(0, 66, 56);
+}
+
+.article-content-1 p {
+    color: gray;
+}
+
+.main-article-2 {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px;
+    gap: 20px;
+}
+
