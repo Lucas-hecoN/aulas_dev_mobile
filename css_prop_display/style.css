@@ -1,0 +1,35 @@
+/*  */
+/* Classe Pai */
+.flex-container1 {
+    border: 3px solid black;
+    height: 350px;
+    display: flex;
+    /* Define o eixo principal */
+    flex-direction: column;
+    /* Alinha o elemento no eixo principal */
+    justify-content: center;
+    /* Alinha o elemento no eixo vertical*/
+    align-items: center;
+    /* Coloca espaço entre os elementos */
+    gap: 26px;
+    margin-bottom: 25px;
+}
+
+.flex-container2 {
+    border: 3px solid black;
+    height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+
+    gap: 26px;
+}
+
+/* Classe Filhas */
+.flex-item {
+    border: 3px solid blue;
+    font-size: 25px;
+    padding: 10px;
+}
