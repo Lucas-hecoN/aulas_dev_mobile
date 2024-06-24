@@ -116,11 +116,11 @@ a.header_nav_active_home{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid red;
+    /* border: 2px solid red; */
 }
 
 .main-nav1-list {
-    border: 2px solid red;
+    /* border: 2px solid red; */
     width: 50%;
     padding-left: 0;
     display: flex;
@@ -144,6 +144,8 @@ a.header_nav_active_home{
     display: flex;
     flex-direction: column;
     background-color: rgb(236, 236, 236);
+    padding: 100px 0;
+    gap: 200px;
 }
 
 .article-img {
@@ -182,3 +184,9 @@ a.header_nav_active_home{
     gap: 20px;
 }
 
+.rodape {
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
