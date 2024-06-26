@@ -1,0 +1,30 @@
+article {
+    outline: 3px solid black;
+}
+article a {
+    color: rgb(132, 0, 255);
+}
+
+/* Seleciona o filho direto */
+article a > b {
+    color: coral;
+}
+
+/* Seleciona o irmão adjscente*/
+article h3 + p {
+    background-color: gold;
+}
+
+/* Seleciona todos os próximos irmãos*/
+hr ~ p {
+    border: 3px dashed red;
+}
+
+.destaque {
+    padding-left: 128px;
+}
+
+/* Aplica a todas as tags "p", exceto as da classe "destaque" */
+p:not(.destaque) {
+    background-color: rgb(103, 217, 255);
+}

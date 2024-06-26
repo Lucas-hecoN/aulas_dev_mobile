@@ -1,0 +1,28 @@
+a {
+    display: inline-block;
+    margin-bottom: 2em;
+}
+
+a[target="_blank"]::after {
+    content: url(../imgs/externo.png);
+    margin-left: .5em;
+}
+
+a[href$=".pdf"]::before {
+    content: url(../imgs/pdf.png);
+    margin-left: .5em;
+}
+
+input[type="checkbox"]:checked + label {
+    color: greenyellow;
+}
+
+input[type="checkbox"]:not(checked) + label {
+    color: red;
+}
+
+input[type="checkbox"]:disabled + label {
+    color: blue;
+}
+
+

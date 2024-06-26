@@ -1,0 +1,31 @@
+a[href="#"] {
+    opacity: .2;
+}
+
+a[href^="https"] {
+    color: red;
+}
+
+a[href$=".pdf"] {
+    color: greenyellow;
+}
+
+a[target="_blank"] {
+    text-decoration: none;
+}
+
+li::after {
+    content: " ***";
+}
+
+li::before {
+    content: "### ";
+}
+
+a::before {
+    content: "@";
+}
+
+ul {
+    list-style-type: "10";
+}
