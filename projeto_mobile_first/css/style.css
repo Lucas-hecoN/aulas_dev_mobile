@@ -1,0 +1,59 @@
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: lightgrey;
+    padding: 15px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+    margin-right: 50px;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+/* #icone-menu seleciona o elemento com o id icone-menu. */
+/* .navbar label seleciona todos os elementos <label> dentro da .navbar */
+/* display: none; oculta esses elementos da visualização. */
+#icone-menu, .navbar label {
+    display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+    .menu {
+        width: 100%;
+        max-height: 0;
+        overflow: hidden; /* oculta qualquer conteúdo que exceda a altura máxima. */
+        transition: max-height 0.3s ease-in-out;
+    }
+
+    .list {
+        flex-direction: column;
+        align-items: flex-end;
+        padding: 20px;
+    }
+
+    .navbar label {
+        display: inline-flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+
+    /* #icone-menu:checked ~ .menu { ... } aplica estilos à .menu quando o elemento com o id icone-menu está marcado (checked): */
+    /* max-height: 100%; permite que o conteúdo da .menu seja totalmente visível, expandindo sua altura. */
+    #icone-menu:checked ~ .menu {
+        max-height: 100vh;
+    }
+}
