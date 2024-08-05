@@ -1,0 +1,139 @@
+:root {
+    --primary-color: #fed001; /* Define variaveis globais CSS que podem ser usadas em todo o documento. */
+}
+
+html {
+    /* font-size: 62.5%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400; */
+    font: 400 62.5% 'Inter', sans-serif; /* Técnica de ajuste de tamanho de fonte para facilitar o uso de unidades de medida  */
+}
+
+p,
+a {
+    font-size: 1.6rem; /* 16px */
+}
+
+h1 {
+    font-size: 4.8rem; /* 48px */
+}
+
+h2 {
+    font-size: 4rem; /* 40 */
+}
+
+h3 {
+    font-size: 3.2rem; /* 32px */
+}
+
+nav a {
+    color:  inherit; /* Eles herdam a cor do texto do elemeto pai */
+}
+
+.upper {
+    text-transform: uppercase;
+}
+
+.btn {
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    font-size: 1.8rem;
+    text-decoration: none;
+    padding: 1.6rem 4.6rem;
+    display: inline-block;
+}
+
+.wrapperContainer {
+    padding-top: 1px;
+}
+
+.wrapperContainer-dark {
+    background-color: #2a2a2a;
+    color: #fafafa;
+}
+
+.wrapperContainer-light {
+    background-color: #fafafa;
+}
+
+.wrapperContainer-dark2 {
+    background-color: #003464;
+    color: #fafafa;
+}
+
+.wrapperContainer-fixed {
+    position: sticky; /* Fixa o menu no decorrer da rolagem de página */
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.wrapperContainer-padded {
+    padding-top: 12rem; /* 120px */
+}
+
+.container {
+    max-width: 127.6rem; /* 1270px */
+    margin: auto;
+}
+
+.section_title {
+    padding: 7rem 0;
+    text-align: center;
+    margin: 0;
+}
+
+.section_btn {
+    margin: 7rem 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+    padding: 2rem 0;
+}
+
+.header_nav a {
+    padding: 10px 5px;
+    border: solid 1px;
+    text-decoration: none;
+}
+
+.header_nav ul {
+    display: flex;
+    gap: 1.5rem;
+    list-style-type: none;
+}
+
+.header_nava a:hover {
+    background-color: rgb(184, 171, 119);
+}
+
+.wrapperContainer-hero {
+    background-image: linear-gradient(transparent, rgb(255, 255, 86));
+}
+
+.heroBanner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20rem;
+
+}
+
+.hero-title {
+    margin-bottom: 4rem;
+}
+
+.cursos {
+    text-align: center;
+}
+
+.cursosContainer {
+    display: flex;
+    text-align: left;
+    gap: 2rem;
+}
+
