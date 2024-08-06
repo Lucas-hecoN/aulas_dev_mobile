@@ -33,8 +33,7 @@ body {
 .header_nav ul {
     display: flex;
     list-style-type: none;
-    font-size: 18px;
-    /* espaçamento entre os elementos */
+    font-size: 18px; /* espaçamento entre os elementos */
     gap: 16px;
 }
 
