@@ -5,8 +5,8 @@
     font-size: 20px;
     padding: 25px;
     width: 25%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 
 
 .form {
@@ -14,9 +14,34 @@
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    /* border: solid 2px blue */
 }
 
+.form div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
 
-.form div input {
-    padding: 10px;
+.form input, textarea {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 8px;
+    font-size: 16px;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.form input[type="submit"] {
+    background-color: rgb(206, 206, 206);
+    cursor: pointer;
+    height: auto;
+    width: 100px;
+    padding: 10px 20px;
 }
