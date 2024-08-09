@@ -1,0 +1,70 @@
+:root {
+    --primary-color: #21a3a3;
+    --second-color: #13c8b5;
+    --threeth-color: #6cf3d5;
+    --fourth-color: #7375a5;
+    --fifth-color: #2b364a;
+}
+
+html {
+    font: 400 62.5% 'Inter', sans-serif;
+}
+
+
+body {
+    /* font-family: Arial, sans-serif; */
+    background-color: var(--primary-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.container {
+    /* background-color: var(--fifth-color); */
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    width: 60rem;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.card-content {
+    background-color: var(--threeth-color);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 70rem;
+    height: 20rem;
+}
+
+
+.card-content h2 {
+    font-size: 2.6rem;
+    color: white;
+}
+
+.card-content a {
+    background-color: var(--fifth-color);
+    padding: 1rem 2rem;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+
+
