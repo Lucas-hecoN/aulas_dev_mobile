@@ -81,6 +81,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 1rem;
     opacity: 0;
     transform: translateY(1rem);
     transition: opacity 0.3s ease, transform 0.3s ease;
@@ -91,6 +92,18 @@ body {
     margin: 0 0 1rem;
     font-size: 1.6rem;
     text-align: center;
+    height: 7rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.card-content p::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 4rem;
+    background: linear-gradient(transparent, #7375a588);
 }
 
 .card-content a {
