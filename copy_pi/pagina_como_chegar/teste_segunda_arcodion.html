@@ -1,28 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acordion</title>
-    <link rel="stylesheet" href="css/accordion.css">
-</head>
-<body>
-    <section class="container">
-        <article class="card">
-            <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="image 1">
-            <div class="card-title">Bosque Rodrigues Alves</div>
-            <div class="card-content">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, facere provident commodi, numquam tenetur dolor dignissimos sapiente quos eum ipsum</p>
-                <a href="#">Detalhes</a>
-            </div>
-        </article>
-
-    </section>
-</body>
-</html> -->
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -31,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card Interativo</title>
     <style>
+
+        * {
+            box-sizing: border-box;
+        }
+
         body {
 
             display: flex;
@@ -38,92 +18,148 @@
             align-items: center;
             margin: 0;
             padding: 0;
-            height: 40vh;
         }
 
-        .faq-container {
-            font-family: Arial, sans-serif;
+        .container {
             width: 80%;
+            padding: 20px;
+            background-color: cornflowerblue;
             display: flex;
-            flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
-            background-color: aquamarine;
+            flex-wrap: wrap;
         }
 
-        .faq-title {
-            font-size: 24px;
-            font-weight: bold;
-            margin-bottom: 20px;
-            color: rgb(6, 6, 6);
-            text-align: center;
-        }
-
-        .faq-item {
+        .card {
+            
+            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
             width: 300px;
             height: 200px;
-            border-radius: 5px;
-            box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-            /* overflow: hidden; */
             position: relative;
+            margin: 10px;
+            overflow: hidden;
             cursor: pointer;
+            transition: height 0.5 ease-in-out;
         }
 
-        .faq-item img {
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            /* overflow: hidden; */
+        }
+
+        .image-container img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            /* transition: opacity 0.3s ease; */
-        }
+        } 
 
-        .faq-question {
+        .card-title {
             position: absolute;
             bottom: 0;
-            margin: 0;
+            left: 0;
+            color: white;
+            background-color: #2b364a71;
             width: 100%;
             padding: 10px;
+            text-align: center;
             font-weight: bold;
-            cursor: pointer;
-            color: white;
         }
 
-        /* .faq-question:hover {
-            background-color: #ddd;
-        } */
-
-        .faq-answer {
-            padding: 0 10px;
-            max-height: 0px;
+        .card-content {
+            display: none;
             overflow: hidden;
-            transition: max-height 0.3s;
-            background-color: darkkhaki;
         }
+
+        .card-content p {
+            padding: 15px;
+            margin: 0;
+        }
+
+        .card.expanded {
+            height: auto;
+        }
+
+        .card.expanded .card-content {
+            display: block;
+        }
+
+
     </style>
-    <script>
-        function toggleAnswer(element) {
-            var answer = element.nextElementSibling;
-            if (answer.style.maxHeight) {
-                answer.style.maxHeight = null;
-            } else {
-                answer.style.maxHeight = answer.scrollHeight + "px";
-            }
-        }
-    </script>
 </head>
 
 <body>
-    <h2 class="faq-title">Parques</h2>
+    <h2 class="title">Parques</h2>
 
-    <section class="faq-container">
-        <article class="faq-item">
-            <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="Imagem">
-            <div class="faq-question" onclick="toggleAnswer(this)">Bosque Rodrigues Alves</div>
-            <div class="faq-answer">
+    <section class="container">
+        <article class="card">
+            <div class="image-container">
+                <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="Imagem">
+                <div class="card-title">Bosque Rodrigues Alves</div>
+            </div>
+            <div class="card-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere id illo rem consequuntur maxime earum aspernatur labore, blanditiis enim numquam aliquid officia tempora quas asperiores magni assumenda exercitationem unde. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti reiciendis nisi illo, similique repellat natus vero ratione unde optio quos quis praesentium aliquam velit sed aperiam earum architecto obcaecati. Rem?</p>
+            </div>
+        </article>
+        <article class="card">
+            <div class="image-container">
+                <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="Imagem">
+                <div class="card-title">Bosque Rodrigues Alves</div>
+            </div>
+            <div class="card-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere id illo rem consequuntur maxime earum aspernatur labore, blanditiis enim numquam aliquid officia tempora quas asperiores magni assumenda exercitationem unde.</p>
+            </div>
+        </article>
+        <article class="card">
+            <div class="image-container">
+                <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="Imagem">
+                <div class="card-title">Bosque Rodrigues Alves</div>
+            </div>
+            <div class="card-content">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere id illo rem consequuntur maxime earum aspernatur labore, blanditiis enim numquam aliquid officia tempora quas asperiores magni assumenda exercitationem unde.</p>
+            </div>
+        </article>
+        <article class="card">
+            <div class="image-container">
+                <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="Imagem">
+                <div class="card-title">Bosque Rodrigues Alves</div>
+            </div>
+            <div class="card-content">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut facere id illo rem consequuntur maxime earum aspernatur labore, blanditiis enim numquam aliquid officia tempora quas asperiores magni assumenda exercitationem unde.</p>
             </div>
         </article>
 
     </section>
-</body>
 
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const cards = document.querySelectorAll('.card');
+
+        cards.forEach(card => {
+            card.addEventListener('click', function() {
+                // Toggle a classe 'expanded' no card clicado
+                this.classList.toggle('expanded');
+
+                // Ajusta a altura do card
+                const content = this.querySelector('.card-content');
+                if (this.classList.contains('expanded')) {
+                    this.style.height = this.scrollHeight + 'px';
+                } else {
+                    this.style.height = '200px';
+                }
+
+                // Fecha os outros cards
+                cards.forEach(otherCard => {
+                    if (otherCard !== this && otherCard.classList.contains('expanded')) {
+                        otherCard.classList.remove('expanded');
+                        otherCard.style.height = '200px';
+                    }
+                });
+            });
+        });
+    });
+    </script>
+
+</body>
 </html>
