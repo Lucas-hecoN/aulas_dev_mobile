@@ -35,7 +35,7 @@ body {
 }
 
 .main-container {
-    margin-top: 80px;
+    margin-top: 7rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,16 +43,27 @@ body {
 }
 
 
-.titulo {
-    text-align: center;
-    color: white;
-    font-size: 24px;
+.var-title {
+    width: 80%;
+    height: 10rem;
     display: flex;
-    align-items: center;
     justify-content: center;
-    gap: 10px;
+    align-items: center;
 }
 
+.pin-drop {
+    font-size: 7rem;
+    color: #2b364a;
+
+}
+
+
+.var-title h1 {
+    font-size: 3.6rem;
+    color: white;
+    text-transform: uppercase;
+    background: none;
+}
 
 
 .container {
@@ -99,9 +110,22 @@ body {
 
 .card-content a {
     text-decoration: none;
-    color: white;
+    color: var(--fifth-color);
     font-size: 1.2rem;
     padding: 1rem 2rem;
     border-radius: 2rem;
-    background-color: var(--primary-color);
+    background-color: var(--threeth-color);
+}
+
+.btn-vmais {
+    margin-top: 3rem;
+}
+
+.btn-vmais a {
+    text-decoration: none;
+    color: var(--fifth-color);
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+    background-color: var(--threeth-color);
 }
