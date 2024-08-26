@@ -34,7 +34,7 @@ body {
     align-items: center; */
 }
 
-.main-container {
+.ch-main-container {
     margin-top: 7rem;
     display: flex;
     flex-direction: column;
@@ -43,26 +43,11 @@ body {
 }
 
 
-.var-title {
-    width: 80%;
-    height: 10rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.pin-drop {
-    font-size: 7rem;
-    color: #2b364a;
-
-}
-
-
-.var-title h1 {
+.ch-titulo {
     font-size: 3.6rem;
     color: white;
     text-transform: uppercase;
-    background: none;
+    
 }
 
 

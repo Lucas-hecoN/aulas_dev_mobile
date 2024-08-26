@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Card 3</title>
+    <style>
+        body {
+            background-color: var(--fifth-color);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .title {
+            margin: 20px 0;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            padding: 20px;
+            background-color: cornflowerblue;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .card {
+            cursor: pointer;
+            max-width: 300px;
+            background-color: var(--fourth-color);
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-title {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            color: white;
+            background-color: #2b364a71;
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .card-content {
+            max-height: 0;
+            opacity: 0;
+            color: #fff;
+            text-transform: lowercase;
+            text-align: center;
+            transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            overflow: hidden;
+            padding: 0 15px;
+        }
+
+        .card.expanded .card-content {
+            max-height: 1000px;
+            opacity: 1;
+            padding: 15px;
+        }
+
+        .card-nav {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .nav-content {
+            /* padding: 10px; */
+            display: flex;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .card-nav img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .card-content p {
+            margin: 0;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .card-content p.active {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container">
+
+        <div class="column">
+            <article class="card">
+                <div class="image-container">
+                    <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="Imagem">
+                    <div class="card-title">Bosque Rodrigues Alves</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-nav">
+                        <nav class="nav-content">
+                            <li><a href="#" data-target="btn1">btn 1</a></li>
+                            <li><a href="#" data-target="btn2">btn 2</a></li>
+                            <li><a href="#" data-target="btn3">btn 3</a></li>
+                        </nav>
+                        <img class="icon-closed" src="assets/icons/icon-closed.png" alt="icone fechar">
+                    </div>
+                    <p data-content="btn1" class="active">
+                        btn1 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <p data-content="btn2">
+                        btn2 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <p data-content="btn3">
+                        btn3 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                </div>
+            </article>
+        </div>
+        <div class="column">
+            <article class="card">
+                <div class="image-container">
+                    <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="Imagem">
+                    <div class="card-title">Bosque Rodrigues Alves</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-nav">
+                        <nav class="nav-content">
+                            <li><a href="#" data-target="btn1">btn 1</a></li>
+                            <li><a href="#" data-target="btn2">btn 2</a></li>
+                            <li><a href="#" data-target="btn3">btn 3</a></li>
+                        </nav>
+                        <img class="icon-closed" src="assets/icons/icon-closed.png" alt="icone fechar">
+                    </div>
+                    <p data-content="btn1" class="active">
+                        btn1 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <p data-content="btn2">
+                        btn2 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <p data-content="btn3">
+                        btn3 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                </div>
+            </article>
+        </div>
+        <div class="column">
+            <article class="card">
+                <div class="image-container">
+                    <img src="https://semma.belem.pa.gov.br/wp-content/uploads/2021/07/GSMa0953.jpg" alt="Imagem">
+                    <div class="card-title">Bosque Rodrigues Alves</div>
+                </div>
+                <div class="card-content">
+                    <div class="card-nav">
+                        <nav class="nav-content">
+                            <li><a href="#" data-target="btn1">btn 1</a></li>
+                            <li><a href="#" data-target="btn2">btn 2</a></li>
+                            <li><a href="#" data-target="btn3">btn 3</a></li>
+                        </nav>
+                        <img class="icon-closed" src="assets/icons/icon-closed.png" alt="icone fechar">
+                    </div>
+                    <p data-content="btn1" class="active">
+                        btn1 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <p data-content="btn2">
+                        btn2 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                    <p data-content="btn3">
+                        btn3 Lorem ipsum, dolor sit amet consectetur adipisicing elit...
+                    </p>
+                </div>
+            </article>
+        </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const cards = document.querySelectorAll('.card');
+
+            cards.forEach(card => {
+                const closeIcon = card.querySelector('.card-content img'); // Seleciona o ícone de fechar
+
+                // Expande o card ao clicar
+                card.addEventListener('click', function (event) {
+                    // Verifica se o clique foi dentro da navegação ou no ícone de fechar e impede que o card feche
+                    if (event.target.closest('.card-nav') || event.target === closeIcon) {
+                        return;
+                    }
+
+                    // Fecha todos os outros cards
+                    cards.forEach(c => {
+                        if (c !== card) {
+                            c.classList.remove('expanded');
+                            const content = c.querySelector('.card-content');
+                            content.style.maxHeight = '0';
+                            content.style.opacity = '0';
+                        }
+                    });
+
+                    // Expande o card atual
+                    const isExpanded = this.classList.toggle('expanded');
+                    const content = this.querySelector('.card-content');
+
+                    if (isExpanded) {
+                        content.style.maxHeight = content.scrollHeight + 'px';
+                        content.style.opacity = '1';
+                    } else {
+                        content.style.maxHeight = '0';
+                        content.style.opacity = '0';
+                    }
+                });
+
+                // Fecha o card ao clicar no ícone de fechar
+                closeIcon.addEventListener('click', function (event) {
+                    event.stopPropagation(); // Evita que o evento de clique no ícone feche o card imediatamente
+                    const content = this.closest('.card-content');
+                    const card = content.closest('.card');
+
+                    card.classList.remove('expanded');
+                    content.style.maxHeight = '0';
+                    content.style.opacity = '0';
+                });
+            });
+
+            // Lógica para a navegação
+            const navLinks = document.querySelectorAll('.card-nav a');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault(); // Evita o comportamento padrão do link
+
+                    // Remove a classe 'active' de todos os parágrafos
+                    const cardContent = this.closest('.card-content');
+                    cardContent.querySelectorAll('p').forEach(p => {
+                        p.classList.remove('active');
+                    });
+
+                    // Adiciona a classe 'active' ao parágrafo correspondente
+                    const target = cardContent.querySelector(`[data-content="${this.getAttribute('data-target')}"]`);
+                    if (target) {
+                        target.classList.add('active');
+                    }
+
+                    // Mantém o card expandido
+                    const card = this.closest('.card');
+                    card.classList.add('expanded');
+                    cardContent.style.maxHeight = cardContent.scrollHeight + 'px';
+                    cardContent.style.opacity = '1';
+                });
+            });
+        });
+    </script>
+    
+</body>
+
+</html>
