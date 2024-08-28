@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio de Descobrir Signo</title>
+    <link rel="stylesheet" href="./css/ex_descobre_signo.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar_link navbar_link-brand">
+            JavaScript
+        </div>
+        <div class="navbar_link navbar_link-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav class="navbar_items">
+            <div class="navbar_link">Home</div>
+            <div class="navbar_link">Projetos</div>
+            <div class="navbar_link">Quem Somos</div>
+        </nav>
+        <nav class="navbar_items navbar_item-right">
+            <div class="navbar_link">Perfil</div>
+        </nav>
+    </div>
+
+    <div class="container">
+         <h1>Utilizando JavaScript</h1>
+         <label for="dataNascimento">Data de Nascimento:</label>
+         <input type="date" id="dataNascimento">
+         <button id="btnVerificarSigno">Verificar</button>
+         <p id="resultado"></p>
+
+         <p>Escolha um item da lista para removê-lo ou adicione mais um item:</p>
+         <select name="itens" id="itens" size="6">
+            <option value="">Camisetas</option>
+            <option value="">Calça</option>
+            <option value="">Sapato</option>
+            <option value="">Bolsa</option>
+         </select>
+         <div class="btn-container">
+            <input type="button" value="Excluir item" id="btnExcluirItem">
+            <input type="button" value="Adicionar item" id="btnAdicionarItem">
+         </div>
+    </div>
+
+    <script src="js/ex_descobre_signo.js"></script>
+</body>
+</html>
