@@ -4,13 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Tarefas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/listatarefas.css">
 </head>
 <body>
     <div class="todo-container">
         <h2>Lista de Tarefas</h2>
+        <div class="filters">
+            <button id="filter-all">Todas</button>
+            <button id="filter-pending">Pendentes</button>
+            <button id="filter-completed">Concluídas</button>
+        </div>
         <input type="text" id="task-input" placeholder="Nova tarefa...">
-        <button id="add-task-btn">Adicionar</button>
+        <button id="add-task-btn" class="fa-solid fa-plus">Adicionar</button>
         <ul id="task-list"></ul>
     </div>
     <script src="./js/listatarefas.js"></script>

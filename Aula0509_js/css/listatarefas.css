@@ -13,7 +13,22 @@ body {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 800px;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+.filters {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    /* gap: 20px; */
 }
 
 #task-input {
@@ -24,16 +39,23 @@ body {
 }
 
 button {
-    width: 100%;
+    width: 150px;
     padding: 10px;
     background-color: #007BFF;
     border: none;
     color: white;
     cursor: pointer;
     margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.fa-solid {
+    background-color: green;
+    font-size: 12px;
 }
 
 ul {
+    width: 100%;
     list-style: none;
     padding: 0;
 }
@@ -59,11 +81,28 @@ button.delete-btn {
     border: none;
     cursor: pointer;
     padding: 5px;
-    width: 30%;
+    width: 20%;
     border-radius: 4px;
 }
 
 .completed span {
     text-decoration: line-through;
     color: gray;
+}
+
+
+@media screen and (max-width: 530px) {
+    .filters {
+        flex-direction: column;
+        /* align-items: center; */
+        gap: 10px;
+    }
+
+    .filters button {
+        width: 100%;
+    }
+
+    li span {
+        overflow-wrap: anywhere; /* overflow-wrap cria uma quebra se uma palavra inteira não puder ser colocada em sua própria linha sem transbordar. */
+    }
 }
