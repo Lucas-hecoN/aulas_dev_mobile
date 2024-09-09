@@ -1,17 +1,8 @@
-/* body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
 .carousel {
-    display: flex;
-    align-items: center;
     position: relative;
-    width: 80%;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     overflow: hidden;
 }
 
@@ -22,108 +13,50 @@
 
 .carousel-wrapper {
     display: flex;
-    transition: transform 0.5s ease-in-out;
-    touch-action: pan-y;
+    transition: transform 0.3s ease-in-out;
 }
 
 .carousel-item {
-    min-width: 200px;
-    margin: 0 10px;
-    background-color: #eee;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    flex-shrink: 0;
-}
-
-button {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px;
-    z-index: 10;
-}
-
-.prev {
-    position: absolute;
-    left: 0;
-}
-
-.next {
-    position: absolute;
-    right: 0;
-}
-
-@media (max-width: 768px) {
-    .carousel-item {
-        min-width: 150px;
-        margin: 0 5px;
-    }
-} */
-
-
-
-body {
-    font-family: Arial, sans-serif;
+    flex: 0 0 100%;
+    height: 200px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-}
-
-.carousel {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 80%;
-    overflow: hidden;
-}
-
-.carousel-container {
-    width: 100%;
-    overflow: hidden;
-}
-
-.carousel-wrapper {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    touch-action: pan-y;
-}
-
-.carousel-item {
-    min-width: 200px;
-    margin: 0 10px;
-    background-color: #eee;
-    border-radius: 8px;
-    padding: 20px;
-    text-align: center;
-    flex-shrink: 0;
-}
-
-button {
-    background: none;
-    border: none;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
     font-size: 24px;
+}
+
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 15px;
     cursor: pointer;
-    padding: 10px;
     z-index: 10;
+    font-size: 18px;
 }
 
 .prev {
-    position: absolute;
     left: 0;
 }
 
 .next {
-    position: absolute;
     right: 0;
 }
 
+/* Adicionando efeito hover para melhor feedback visual */
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Garantindo que os botões sejam visíveis em telas menores */
 @media (max-width: 768px) {
-    .carousel-item {
-        min-width: 150px;
-        margin: 0 5px;
+    .prev, .next {
+        padding: 8px 12px;
+        font-size: 16px;
     }
 }

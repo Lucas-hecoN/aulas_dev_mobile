@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrossel de Cards</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            width: 80vw;
+            margin: 4rem auto;
+            position: relative;
+        }
+
+        .caixa {
+            width: 100%;
+            height: 14rem;
+            background-color: #663399;
+            border: solid 4px #4b0082;
+            display: flex;
+            gap: 1rem;
+            padding: 1rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            position: relative;
+        }
+
+        .caixa::-webkit-scrollbar {
+            display: none;
+        }
+
+        .card {
+            min-width: 14rem;
+            max-height: 12rem;
+            background-color: #d2691e;
+            border: solid 2px #8b4513;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            scroll-snap-align: center;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .nav-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.412);
+            border: none;
+            padding: 0.8rem;
+            cursor: pointer;
+            font-size: 1.5rem;
+            z-index: 1;
+        }
+
+        .nav-button.left {
+            left: 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .nav-button.right {
+            right: 0;
+            border-radius: 5px 0 0 5px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="nav-button left">&#8249;</button>
+        <div class="caixa" id="carrossel">
+            <div class="card">
+                <p>1</p>
+            </div>
+            <div class="card">
+                <p>2</p>
+            </div>
+            <div class="card">
+                <p>3</p>
+            </div>
+            <div class="card">
+                <p>4</p>
+            </div>
+            <div class="card">
+                <p>5</p>
+            </div>
+            <div class="card">
+                <p>6</p>
+            </div>
+        </div>
+        <button class="nav-button right">&#8250;</button>
+    </div>
+
+    <script>
+        const carrossel = document.getElementById('carrossel');
+        const leftButton = document.querySelector('.nav-button.left');
+        const rightButton = document.querySelector('.nav-button.right');
+
+        function scrollLeft() {
+            carrossel.scrollBy({
+                left: -carrossel.clientWidth,
+                behavior: 'smooth'
+            });
+        }
+
+        function scrollRight() {
+            carrossel.scrollBy({
+                left: carrossel.clientWidth,
+                behavior: 'smooth'
+            });
+        }
+
+        leftButton.addEventListener('click', scrollLeft);
+        rightButton.addEventListener('click', scrollRight);
+
+        carrossel.addEventListener('scroll', function() {
+            const maxScrollLeft = carrossel.scrollWidth - carrossel.clientWidth;
+            leftButton.disabled = carrossel.scrollLeft === 0;
+            rightButton.disabled = carrossel.scrollLeft >= maxScrollLeft;
+        });
+
+        window.addEventListener('load', function() {
+            const maxScrollLeft = carrossel.scrollWidth - carrossel.clientWidth;
+            leftButton.disabled = carrossel.scrollLeft === 0;
+            rightButton.disabled = carrossel.scrollLeft >= maxScrollLeft;
+        });
+    </script>
+</body>
+</html>
