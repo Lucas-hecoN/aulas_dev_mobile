@@ -88,7 +88,31 @@
 <body>
     <div class="container">
         <button class="nav-button left">&#8249;</button>
-        <div class="caixa" id="carrossel">
+        <div class="caixa" data-carousel>
+            <div class="card">
+                <p>1</p>
+            </div>
+            <div class="card">
+                <p>2</p>
+            </div>
+            <div class="card">
+                <p>3</p>
+            </div>
+            <div class="card">
+                <p>4</p>
+            </div>
+            <div class="card">
+                <p>5</p>
+            </div>
+            <div class="card">
+                <p>6</p>
+            </div>
+        </div>
+        <button class="nav-button right">&#8250;</button>
+    </div>
+    <div class="container">
+        <button class="nav-button left">&#8249;</button>
+        <div class="caixa" data-carousel>
             <div class="card">
                 <p>1</p>
             </div>
@@ -111,39 +135,6 @@
         <button class="nav-button right">&#8250;</button>
     </div>
 
-    <script>
-        const carrossel = document.getElementById('carrossel');
-        const leftButton = document.querySelector('.nav-button.left');
-        const rightButton = document.querySelector('.nav-button.right');
-
-        function scrollLeft() {
-            carrossel.scrollBy({
-                left: -carrossel.clientWidth,
-                behavior: 'smooth'
-            });
-        }
-
-        function scrollRight() {
-            carrossel.scrollBy({
-                left: carrossel.clientWidth,
-                behavior: 'smooth'
-            });
-        }
-
-        leftButton.addEventListener('click', scrollLeft);
-        rightButton.addEventListener('click', scrollRight);
-
-        carrossel.addEventListener('scroll', function() {
-            const maxScrollLeft = carrossel.scrollWidth - carrossel.clientWidth;
-            leftButton.disabled = carrossel.scrollLeft === 0;
-            rightButton.disabled = carrossel.scrollLeft >= maxScrollLeft;
-        });
-
-        window.addEventListener('load', function() {
-            const maxScrollLeft = carrossel.scrollWidth - carrossel.clientWidth;
-            leftButton.disabled = carrossel.scrollLeft === 0;
-            rightButton.disabled = carrossel.scrollLeft >= maxScrollLeft;
-        });
-    </script>
+    <script src="js/carrossel-card-2.js"></script>
 </body>
 </html>
