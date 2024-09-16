@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo de Página Responsiva</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh; /* Garantir que o body ocupe a tela inteira */
+    }
+
+    header {
+      background-color: #f8b400;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      background-color: #4caf50;
+      flex: 1; /* Este elemento vai expandir para preencher o espaço */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Cabeçalho</h1>
+  </header>
+
+  <main>
+    <p>Conteúdo principal</p>
+  </main>
+
+  <footer>
+    <p>Rodapé</p>
+  </footer>
+
+</body>
+</html>
